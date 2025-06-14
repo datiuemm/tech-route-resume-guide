@@ -57,16 +57,16 @@ const Index = () => {
           <p className="text-xl text-blue-200">Automation Engineer & Technology Specialist</p>
         </header>
 
-        {/* Main Layout with RoadSign Left and Career Objective Right */}
-        <div className="flex flex-col lg:flex-row gap-8 mb-16">
-          {/* Road Sign Navigation - Left */}
-          <div className="lg:w-1/3">
+        {/* Main Layout with RoadSign Left and Career Objective Right - Balanced 50/50 */}
+        <div className="grid lg:grid-cols-2 gap-8 mb-16 items-start">
+          {/* Road Sign Navigation - Left Half */}
+          <div className="flex justify-center">
             <RoadSignNav activeSection={activeSection} setActiveSection={setActiveSection} />
           </div>
 
-          {/* Career Objective - Right */}
-          <div className="lg:w-2/3">
-            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 text-white rounded-3xl shadow-2xl">
+          {/* Career Objective - Right Half */}
+          <div className="flex justify-center">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 text-white rounded-3xl shadow-2xl w-full max-w-lg">
               <CardHeader>
                 <CardTitle className="text-3xl text-center text-blue-300">Mục Tiêu Nghề Nghiệp</CardTitle>
               </CardHeader>
