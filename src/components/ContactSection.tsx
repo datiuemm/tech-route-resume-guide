@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Github, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Download } from "lucide-react";
 
 export const ContactSection = () => {
   const contactInfo = [
@@ -24,18 +24,22 @@ export const ContactSection = () => {
       href: "https://github.com/datiuemm"
     },
     {
-      icon: <ExternalLink className="w-6 h-6" />,
-      label: "Portfolio Website",
-      value: "https://datiuemm.github.io",
-      href: "https://datiuemm.github.io"
-    },
-    {
       icon: <MapPin className="w-6 h-6" />,
       label: "Địa chỉ",
       value: "Quận Nam Từ Liêm, Hà Nội",
       href: null
     }
   ];
+
+  const handleDownloadCV = () => {
+    // Create a temporary anchor element to trigger download
+    const link = document.createElement('a');
+    link.href = '/CV.pdf';
+    link.download = 'CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div className="max-w-4xl mx-auto space-y-8">
@@ -93,11 +97,12 @@ export const ContactSection = () => {
             Truy cập website "https://datiuemm.github.io" để biết thêm thông tin.
           </p>
           <div className="pt-4">
-            <Button asChild className="bg-blue-600/80 hover:bg-blue-700/80 text-white backdrop-blur-sm rounded-2xl border border-blue-400/30">
-              <a href="https://datiuemm.github.io" target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Xem Portfolio Website
-              </a>
+            <Button 
+              onClick={handleDownloadCV}
+              className="bg-blue-600/80 hover:bg-blue-700/80 text-white backdrop-blur-sm rounded-2xl border border-blue-400/30"
+            >
+              <Download className="w-4 h-4 mr-2" />
+              Tải CV.pdf
             </Button>
           </div>
         </CardContent>

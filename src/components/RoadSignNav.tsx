@@ -17,8 +17,8 @@ export const RoadSignNav = ({ activeSection, setActiveSection }: RoadSignNavProp
 
   return (
     <div className="flex justify-center items-center">
-      <div className="relative">
-        {/* Main Pole with liquid glass effect */}
+      <div className="relative ml-8">
+        {/* Main Pole with liquid glass effect - shifted right */}
         <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-96 bg-gradient-to-b from-white/20 to-gray-300/40 backdrop-blur-xl rounded-full shadow-2xl z-0 border border-white/20"></div>
         
         {/* Road Signs */}
