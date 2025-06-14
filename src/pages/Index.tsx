@@ -6,6 +6,7 @@ import { ProjectsSection } from "@/components/ProjectsSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { CertificationsSection } from "@/components/CertificationsSection";
 import { ContactSection } from "@/components/ContactSection";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("contact");
@@ -56,8 +57,27 @@ const Index = () => {
           <p className="text-xl text-blue-200">Automation Engineer & Technology Specialist</p>
         </header>
 
-        {/* Road Sign Navigation */}
-        <RoadSignNav activeSection={activeSection} setActiveSection={setActiveSection} />
+        {/* Main Layout with RoadSign Left and Career Objective Right */}
+        <div className="flex flex-col lg:flex-row gap-8 mb-16">
+          {/* Road Sign Navigation - Left */}
+          <div className="lg:w-1/3">
+            <RoadSignNav activeSection={activeSection} setActiveSection={setActiveSection} />
+          </div>
+
+          {/* Career Objective - Right */}
+          <div className="lg:w-2/3">
+            <Card className="bg-white/5 backdrop-blur-xl border border-white/10 text-white rounded-3xl shadow-2xl">
+              <CardHeader>
+                <CardTitle className="text-3xl text-center text-blue-300">Mục Tiêu Nghề Nghiệp</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg leading-relaxed text-gray-200">
+                  Là sinh viên năm 4 ngành Kỹ thuật Điều khiển và Tự động hoá. Với có đam mê trong lĩnh vực tự động hoá cùng với sự ham học hỏi em rất mong muốn được làm việc với những người có kinh nghiệm. Với những năm học qua trong nhà trường, em có hiểu biết nhất định về các lĩnh vực tự động hoá như PLC, MCU, AI, Bán dẫn. Em có có ngoại ngữ: Tiếng Nhật, tiếng Anh, tiếng Trung. Trong đó có khả năng đọc hiểu tài liệu bằng tiếng anh. Cũng đã từng tham gia viết báo khoa học. Em rất mong tìm được một vị trí phù hợp với mình.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
 
         {/* Content Section */}
         <div className="mt-16 animate-fade-in">

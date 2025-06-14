@@ -46,14 +46,14 @@ export const ContactSection = () => {
         <h3 className="text-3xl font-semibold text-blue-300 mb-4">Liên Hệ Với Tôi</h3>
       </div>
       
-      <Card className="bg-white/10 backdrop-blur-md border-blue-300/30 text-white">
+      <Card className="bg-white/5 backdrop-blur-xl border border-white/10 text-white rounded-3xl shadow-2xl">
         <CardHeader>
           <CardTitle className="text-2xl text-center text-blue-300">Thông Tin Liên Hệ</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">
             {contactInfo.map((contact, index) => (
-              <div key={index} className="flex items-center space-x-4 p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+              <div key={index} className="flex items-center space-x-4 p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm border border-white/5">
                 <div className="text-blue-400">
                   {contact.icon}
                 </div>
@@ -78,7 +78,7 @@ export const ContactSection = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-white/10 backdrop-blur-md border-green-300/30 text-white">
+      <Card className="bg-white/5 backdrop-blur-xl border border-white/10 text-white rounded-3xl shadow-2xl">
         <CardHeader>
           <CardTitle className="text-2xl text-center text-green-300">Thông Tin Thêm</CardTitle>
         </CardHeader>
@@ -93,7 +93,7 @@ export const ContactSection = () => {
             Truy cập website "https://datiuemm.github.io" để biết thêm thông tin.
           </p>
           <div className="pt-4">
-            <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
+            <Button asChild className="bg-blue-600/80 hover:bg-blue-700/80 text-white backdrop-blur-sm rounded-2xl border border-blue-400/30">
               <a href="https://datiuemm.github.io" target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="w-4 h-4 mr-2" />
                 Xem Portfolio Website

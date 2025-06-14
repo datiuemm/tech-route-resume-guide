@@ -4,19 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 export const AboutSection = () => {
   return (
     <div className="max-w-4xl mx-auto space-y-8">
-      <Card className="bg-white/10 backdrop-blur-md border-blue-300/30 text-white">
-        <CardHeader>
-          <CardTitle className="text-3xl text-center text-blue-300">Mục Tiêu Nghề Nghiệp</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-lg leading-relaxed text-gray-200">
-            Là sinh viên năm 4 ngành Kỹ thuật Điều khiển và Tự động hoá. Với có đam mê trong lĩnh vực tự động hoá cùng với sự ham học hỏi em rất mong muốn được làm việc với những người có kinh nghiệm. Với những năm học qua trong nhà trường, em có hiểu biết nhất định về các lĩnh vực tự động hoá như PLC, MCU, AI, Bán dẫn. Em có có ngoại ngữ: Tiếng Nhật, tiếng Anh, tiếng Trung. Trong đó có khả năng đọc hiểu tài liệu bằng tiếng anh. Cũng đã từng tham gia viết báo khoa học. Em rất mong tìm được một vị trí phù hợp với mình.
-          </p>
-        </CardContent>
-      </Card>
-
       <div className="grid md:grid-cols-2 gap-6">
-        <Card className="bg-white/10 backdrop-blur-md border-green-300/30 text-white">
+        <Card className="bg-white/5 backdrop-blur-xl border border-white/10 text-white rounded-3xl shadow-2xl">
           <CardHeader>
             <CardTitle className="text-2xl text-green-300">Học Vấn</CardTitle>
           </CardHeader>
@@ -35,7 +24,7 @@ export const AboutSection = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-white/10 backdrop-blur-md border-purple-300/30 text-white">
+        <Card className="bg-white/5 backdrop-blur-xl border border-white/10 text-white rounded-3xl shadow-2xl">
           <CardHeader>
             <CardTitle className="text-2xl text-purple-300">Kinh Nghiệm</CardTitle>
           </CardHeader>
@@ -52,7 +41,7 @@ export const AboutSection = () => {
         </Card>
       </div>
 
-      <Card className="bg-white/10 backdrop-blur-md border-orange-300/30 text-white">
+      <Card className="bg-white/5 backdrop-blur-xl border border-white/10 text-white rounded-3xl shadow-2xl">
         <CardHeader>
           <CardTitle className="text-2xl text-orange-300">Ngôn Ngữ</CardTitle>
         </CardHeader>
