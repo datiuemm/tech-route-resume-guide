@@ -179,7 +179,11 @@ function useToast() {
         listeners.splice(index, 1)
       }
     }
-  }, [state])
+    // Adding the listener should only happen once when the
+    // component using this hook mounts. Using an empty
+    // dependency array prevents duplicating listeners whenever
+    // the toast state updates.
+  }, [])
 
   return {
     ...state,
