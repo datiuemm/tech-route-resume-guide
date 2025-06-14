@@ -39,7 +39,12 @@ export const ContactSection = () => {
 
   return (
     <div className="max-w-4xl mx-auto space-y-8">
-      <h2 className="text-4xl font-bold text-center text-white mb-8">Liên Hệ Với Tôi</h2>
+      <div className="text-center mb-8">
+        <h2 className="text-6xl font-bold text-white mb-2 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
+          Đinh Trọng Đạt
+        </h2>
+        <h3 className="text-3xl font-semibold text-blue-300 mb-4">Liên Hệ Với Tôi</h3>
+      </div>
       
       <Card className="bg-white/10 backdrop-blur-md border-blue-300/30 text-white">
         <CardHeader>

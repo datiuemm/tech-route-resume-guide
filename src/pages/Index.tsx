@@ -8,10 +8,12 @@ import { CertificationsSection } from "@/components/CertificationsSection";
 import { ContactSection } from "@/components/ContactSection";
 
 const Index = () => {
-  const [activeSection, setActiveSection] = useState("about");
+  const [activeSection, setActiveSection] = useState("contact");
 
   const renderActiveSection = () => {
     switch (activeSection) {
+      case "contact":
+        return <ContactSection />;
       case "about":
         return <AboutSection />;
       case "projects":
@@ -20,10 +22,8 @@ const Index = () => {
         return <SkillsSection />;
       case "certifications":
         return <CertificationsSection />;
-      case "contact":
-        return <ContactSection />;
       default:
-        return <AboutSection />;
+        return <ContactSection />;
     }
   };
 
@@ -51,7 +51,7 @@ const Index = () => {
         {/* Header */}
         <header className="text-center mb-12">
           <h1 className="text-5xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
-            Dinh Trong Dat
+            Đinh Trọng Đạt
           </h1>
           <p className="text-xl text-blue-200">Automation Engineer & Technology Specialist</p>
         </header>

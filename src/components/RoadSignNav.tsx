@@ -8,11 +8,11 @@ interface RoadSignNavProps {
 
 export const RoadSignNav = ({ activeSection, setActiveSection }: RoadSignNavProps) => {
   const sections = [
+    { id: "contact", label: "Liên Hệ", icon: "📧" },
     { id: "about", label: "Giới Thiệu", icon: "👨‍💻" },
     { id: "projects", label: "Dự Án", icon: "🚀" },
     { id: "skills", label: "Kỹ Năng", icon: "⚡" },
     { id: "certifications", label: "Chứng Chỉ", icon: "🏆" },
-    { id: "contact", label: "Liên Hệ", icon: "📧" },
   ];
 
   return (
